@@ -1,6 +1,6 @@
 #include <cstdio>
 
-int main() {
+int main(int argc, char **argv) {
     int a1 = 0;
     int b1 = 0;
     int c1 = 0;

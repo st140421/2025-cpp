@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <cmath>
 
-int main() {
+int main(int argc, char **argv) {
 
     int x1 = 0;
     int y1 = 0;

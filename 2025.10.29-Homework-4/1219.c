@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(int argc, char **argv) {
     int N = 0;
     int A = 0;
     int B = 0;
