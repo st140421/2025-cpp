@@ -12,7 +12,7 @@ public:
         if(size == capacity){
             double* newdata = new double[capacity*2];
             for(int i=0;i<capacity;i++){
-                data[i] = newdata[i];
+                newdata[i] = data[i];
             }
             delete[] data;
             data = newdata;
@@ -39,11 +39,22 @@ public:
     void getsize(){
         std::cout<<size<<std::endl;
     }
-    
+
     void print(){
         for(int i=0;i<size;i++){
             std::cout<<data[i]<<std::endl;
         }
+    }
+
+    void contains(double value){
+        for(int i=0;i<size;i++){
+            if(data[i]==value){std::cout<<"yes"<<std::endl;return;}
+        }
+        std::cout<<"no"<<std::endl;
+    }
+
+    void clear(){
+        size = 0;
     }
 };
 
@@ -63,6 +74,14 @@ int main(){
 
     list.getsize();
 
+    list.print();
+
+    list.contains(2.5);
+
+    list.clear();
+
+    list.getsize();
+    list.get(1);
     list.print();
 
     return 0;
