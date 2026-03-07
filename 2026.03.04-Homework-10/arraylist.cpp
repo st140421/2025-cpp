@@ -9,7 +9,6 @@ public:
     ~ArrayList(){delete[] data;}
 
     void add(double value){
-
         if(size == capacity){
             double* newdata = new double[capacity*2];
             for(int i=0;i<capacity;i++){
@@ -25,18 +24,22 @@ public:
     void get(int index){
         std::cout<<data[index]<<std::endl;
     }
+
     void set(int index, double value){
         data[index] = value;
     }
+
     void remove(int index){
         for(int i=index;i<size-1;i++){
             data[i] = data[i+1];
         }
         size--;
     }
+
     void getsize(){
         std::cout<<size<<std::endl;
     }
+    
     void print(){
         for(int i=0;i<size;i++){
             std::cout<<data[i]<<std::endl;
@@ -59,7 +62,7 @@ int main(){
     list.remove(0);
 
     list.getsize();
-    
+
     list.print();
 
     return 0;
